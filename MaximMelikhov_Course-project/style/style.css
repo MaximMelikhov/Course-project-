@@ -28,6 +28,7 @@
 a {
   text-decoration: none;
   outline: none;
+  cursor: pointer;
 }
 
 ul {
@@ -38,6 +39,256 @@ img {
   max-width: 100%;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Open Sans',sans-serif;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+:root {
+  --color-white: #fff;
+  --color-violet: #9D5CD0;
+  --color-violet_focus: #C283F3;
+  --color-violet_active: #7943A4;
+}
+
+
+/* HEADER */
+
+.header {
+  background-color: rgb(0, 0, 0);
+}
+
+.header__container-flex {
+  display: flex;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 30px;
+}
+
+.logo {
+  margin-right: 179px;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav_item {
+  margin-right: 56px;
+}
+
+.nav_item:last-child {
+  margin-right: 0;
+}
+
+.nav_link {
+  padding: 2px 3px;
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 600;
+  transition: color, 0.2s ease-in-out;
+}
+
+.nav_link:hover {
+  color: var(--color-white);
+  background-color: var(--color-violet);
+  transition: color, 0.2s ease-in-out;
+}
+
+.nav_link:focus {
+  color: var(--color-violet_focus);
+  background-color: #000;
+}
+
+.nav_link:active {
+  color: var(--color-violet_active);
+}
+
+.entry_block {
+  margin-left: auto;
+  width: 78px;
+  transform: translateX(3px);
+}
+
+.entry_link {
+  padding: 2px 3px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-white);
+  transition: color 0.2s ease-in-out;
+}
+
+.entry_link-span {
+  transition: fill 0.2s ease-in-out;
+}
+
+.entry_link:hover{
+  color: var(--color-white);
+  background-color: var(--color-violet);
+  transition: color 0.2s ease-in-out;
+}
+
+.entry_link:focus {
+  color: var(--color-violet_focus);
+  background-color: #000;
+}
+
+.entry_link:focus .entry_link-span {
+  fill: var(--color-violet_focus);
+}
+
+.entry_link:active {
+  color: var(--color-violet_active);
+}
+
+.entry_link:active .entry_link-span {
+  fill: var(--color-violet_active);
+}
+
+
+/* Header_bottom */
+
+.header-bottom_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_bottom {
+  background-color: rgba(0, 0, 0, 0.404);
+  padding-top: 23px;
+  padding-bottom: 20px;
+  z-index: 2;
+}
+
+.bottom_menu {
+  max-width: 1036px;
+}
+
+.bottom_list {
+  display: flex;
+}
+
+.bottom_item {
+  margin-right: 97px;
+}
+
+.bottom_item:last-child {
+  margin-right: 0;
+}
+
+.bottom_link {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.bottom_link::after {
+  display: inline-block;
+  content: "";
+  width: 13px;
+  height: 12px;
+  background-image: url('../image/arrow_nav.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-left: 3px;
+}
+
+.header_search {
+  width: 225px;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-left: 5px;
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+
+.header_search::placeholder {
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.header_form {
+  position: relative;
+}
+
+.header_search::after {
+  position: absolute;
+  bottom: 0;
+  left: 37px;
+  content: "";
+  width: 220px;
+  height: 1px;
+  background-color: var(--color-white);
+}
+
+.search {
+  display: inline-block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url('../image/search_nav.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  transform: translateY(3px);
+}
+
+/* Hero */
+
+.main {
+  position: relative;
+}
+
+.hero_bg {
+  position: absolute;
+  top: -68px;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  background-image: url('../image/hero_bg.jpg');
+  background-size: cover;
+  z-index: -1;
+}
+
+.hero_heading {
+  max-width: 600px;
+  padding-top: 140px;
+  margin-bottom: 20px;
+  font-size: 72px;
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.hero_description {
+  max-width: 580px;
+  margin-bottom: 93px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 30px;
+}
+
+.hero_button {
+  padding: 25px 35px;
+  font-size: 18px;
+  font-weight: 800;
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
 }
