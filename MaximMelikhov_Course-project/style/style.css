@@ -280,7 +280,7 @@ body {
 
 .hero {
   min-height: 635px;
-  margin-bottom: 181px;
+  margin-bottom: 80px;
 }
 
 .hero_bg::before{
@@ -342,10 +342,129 @@ body {
   transition: box-shadow, background-color 0.2s ease-in-out;
 }
 
+/* About */
+
+.about {
+  margin-bottom: 65px;
+  padding-bottom: 5px;
+}
+
 .about_descr {
   width: 1080px;
   margin-top: 22px;
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
+}
+
+/* Gallery */
+
+.gallery {
+  padding-top: 85px;
+  min-height: 995px;
+  background-image: url('../image/gallery_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container_gallery {
+  display: flex;
+}
+
+.gallery_left {
+  width: 400px;
+}
+
+.medium_title_gallery {
+  color: var(--color-white);
+}
+
+.filter_title {
+  margin-top: 28px;
+  margin-bottom: 23px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.gallery_descr {
+  width: 400px;
+  margin-top: 562px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.gallery_login {
+  color: var(--color-violet_focus);
+  transition: color 0.2s ease-in-out;
+}
+
+.gallery_login:hover {
+  color: #D1A9F0;
+  transition: color 0.2s ease-in-out;
+}
+
+.gallery_right {
+  margin-left: 50px;
+  margin-top: 14px;
+}
+
+.gallery_pagination {
+  margin-bottom: 32px;
+  margin-left: 2px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.gallery_pagination::before {
+  display: inline-block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  padding: 11px;
+  margin-right: 21px;
+  background-image: url('../image/aroow_gallery_left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(6px);
+  background-color: #666666;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.gallery_pagination::after {
+  display: inline-block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  padding: 11px;
+  margin-left: 20px;
+  background-image: url('../image/arrow_right_gallery.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(6px);
+  background-color: #666666;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.gallery_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery_item {
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.gallery_item:nth-child(3n) {
+  margin-right: 0;
 }
