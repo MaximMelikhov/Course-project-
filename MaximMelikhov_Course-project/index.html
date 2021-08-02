@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./style/normalize.css">
   <link rel="stylesheet" href="./style/style.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <title>Blanchard</title>
 </head>
 <body>
@@ -15,85 +17,121 @@
 
   <!-- Top_Menu -->
   <header class="header">
-    <div class="container header__container-flex">
+    <section class="header-top">
+      <div class="container header__container-flex">
 
-      <div class="logo">
-        <a href="#" class="logo_link">
-        <img src="./image/logo.svg" alt="Логотип">
-        </a>
+        <div class="logo">
+          <a href="#" class="logo_link">
+          <img src="./image/logo.svg" alt="Логотип">
+          </a>
+        </div>
+  
+        <nav class="nav">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a href="#about" class="nav_link">О нас</a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">Галерея</a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">Каталог</a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">События</a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">Издания</a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">Проекты</a>
+            </li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+  
+        <div class="entry_block">
+          <a href="#" class="entry_link">
+            <span>
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="entry_link-span" d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+                </svg>
+            </span>
+            Войти
+          </a>
+        </div>
+  
       </div>
+    </section>
 
-      <nav class="nav">
-        <ul class="nav_list">
-          <li class="nav_item">
-            <a href="#about" class="nav_link">О нас</a>
-          </li>
-          <li class="nav_item">
-            <a href="#" class="nav_link">Галерея</a>
-          </li>
-          <li class="nav_item">
-            <a href="#" class="nav_link">Каталог</a>
-          </li>
-          <li class="nav_item">
-            <a href="#" class="nav_link">События</a>
-          </li>
-          <li class="nav_item">
-            <a href="#" class="nav_link">Издания</a>
-          </li>
-          <li class="nav_item">
-            <a href="#" class="nav_link">Проекты</a>
-          </li>
-          <li class="nav_item">
-            <a href="#" class="nav_link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+          <!-- Bottom_Menu -->
 
-      <div class="entry_block">
-        <a href="#" class="entry_link">
-          <span>
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="entry_link-span" d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
-              </svg>
-          </span>
-          Войти
-        </a>
-      </div>
+      <section class="header-bottom">
+        <div class="container header-bottom_container">
+          <div class="bottom_menu">
 
-    </div>
+            <div class="nav_dropdawn">
+              <button onclick="myFunction()" class="nav_dropdawn-btn">Реализм</button>
+              <div id="myDropdown" class="nav_dropdawn-content nav_dropdawn-content_one">
+                <a href="#" class="nav_dropdawn-link nav_dropdawn-link_tin">Тинторетто</a>
+                <a href="#" class="nav_dropdawn-link nav_dropdawn-link_fri">Фридрих</a>
+                <a href="#" class="nav_dropdawn-link nav_dropdawn-link_leo">Леонардо</a>
+                <a href="#" class="nav_dropdawn-link nav_dropdawn-link_ver">Верроккьо</a>
+              </div>
+            </div>
 
-    <!-- Bottom_Menu -->
-  </header>
+            <div class="nav_dropdawn">
+              <button onclick="myFunction()" class="nav_dropdawn-btn">Импрессионизм</button>
+              <div id="myDropdown" class="nav_dropdawn-content nav_dropdawn-content_two">
+                <a href="#" class="nav_dropdawn-link">k</a>
+                <a href="#" class="nav_dropdawn-link">j</a>
+                <a href="#" class="nav_dropdawn-link">j</a>
+                <a href="#" class="nav_dropdawn-link">j</a>
+              </div>
+            </div>
 
-  <header class="header header_bottom">
-    <div class="container header-bottom_container">
-      <div class="bottom_menu">
-        <ul class="bottom_list">
-          <li class="bottom_item">
-            <a href="#" class="bottom_link">Реализм</a>
-          </li>
-          <li class="bottom_item">
-            <a href="#" class="bottom_link">Импрессионизм</a>
-          </li>
-          <li class="bottom_item">
-            <a href="#" class="bottom_link">Постимпрессионизм</a>
-          </li>
-          <li class="bottom_item">
-            <a href="#" class="bottom_link">Авангард</a>
-          </li>
-          <li class="bottom_item">
-            <a href="#" class="bottom_link">Футуризм</a>
-          </li>
-        </ul>
-      </div>
-      <form class="header_form">
-        <label class="header_search">
-          <span class="search"></span>
-          <input type="search" id="header_search" placeholder="Поиск по сайту" class="header_search">
-        </label>
-      </form>
+            <div class="nav_dropdawn">
+              <button onclick="myFunction()" class="nav_dropdawn-btn">Постимпрессионизм</button>
+              <div id="myDropdown" class="nav_dropdawn-content">
+                <a href="#">f</a>
+                <a href="#">f</a>
+                <a href="#">f</a>
+                <a href="#">f</a>
+                <a href="#">f</a>
+              </div>
+            </div>
 
-    </div>
+            <div class="nav_dropdawn">
+              <button onclick="myFunction()" class="nav_dropdawn-btn">Авангард</button>
+              <div id="myDropdown" class="nav_dropdawn-content">
+                <a href="#">f</a>
+                <a href="#">f</a>
+                <a href="#">f</a>
+                <a href="#">f</a>
+                <a href="#">f</a>
+              </div>
+            </div>
+
+            <div class="nav_dropdawn">
+              <button onclick="myFunction()" class="nav_dropdawn-btn">Футуризм</button>
+              <div id="myDropdown" class="nav_dropdawn-content">
+                <a href="#">f</a>
+                <a href="#">f</a>
+                <a href="#">f</a>
+                <a href="#">f</a>
+                <a href="#">f</a>
+              </div>
+            </div>
+
+          </div>
+          <form class="header_form">
+              <button class="search_button"></button>
+              <input type="search" id="header_search" placeholder="Поиск по сайту" class="header_search">
+          </form>
+        </div>
+      </section>
   </header>
 
   <!-- Main -->
@@ -101,31 +139,46 @@
   <main class="main">
 
     <!-- Hero -->
-    <div class="hero hero_bg">
+    <section class="hero hero_bg">
+
+            <!-- Slider main container -->
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+            <div class="swiper-slide swiper-slide_one"></div>
+            <div class="swiper-slide swiper-slide_two"></div>
+            <div class="swiper-slide swiper-slide_three"></div>
+            </div>
+              <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+
       <div class="container">
+        <div class="hero_main">
+          <h1 class="hero_heading">Прикоснитесь к прекрасному</h1>
+          <p class="hero_description">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
 
-        <h1 class="hero_heading">Прикоснитесь к прекрасному</h1>
-        <p class="hero_description">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
-
-        <button class="hero_button">Подписаться на рассылку</button>
+          <button class="hero_button">Подписаться на рассылку</button>
+        </div>
 
       </div>
-    </div>
+    </section>
 
     <!-- About -->
 
-    <div class="about" id="about">
+    <section class="about" id="about">
       <div class="container">
         <h2 class="medium_title">О нас</h2>
 
         <p class="about_descr"> Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.
         </p>
       </div>
-    </div>
+    </section>
 
     <!-- Gallery  -->
 
-    <div class="gallery">
+    <section class="gallery">
       <div class="container container_gallery">
         <div class="gallery_left">
           <h2 class="medium_title medium_title_gallery">Галерея</h2>
@@ -168,20 +221,67 @@
         </div>  
 
       </div>
-    </div>
+    </section>
 
+    <!-- Catalog -->
 
+    <section class="catalog">
+      <div class="container">
+        <h2 class="medium_title">Каталог</h2>
 
-
-
-
-
-
-
-
-
+        <p>A</p>
+      </div>
+    </section>
 
 
   </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="./js/js.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+
+    autoplay: {
+    delay: 6000,
+  },
+});
+  </script>
 </body>
 </html>
