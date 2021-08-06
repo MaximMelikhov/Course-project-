@@ -1,16 +1,24 @@
-function myFunction() {
-document.getElementById("myDropdown").classList.toggle("show");
-}
+// Bottom_nav
 
-window.onclick = function(event) {
-if (!event.target.matches('.nav_dropdawn-btn')) {
-    var dropdowns = document.getElementsByClassName("nav_dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-    var openDropdown = dropdowns[i];
-    if (openDropdown.classList.contains('show')) {
-    openDropdown.classList.remove('show');
-    }
-    }
+const button = document.querySelectorAll('button');
+const drop = document.querySelectorAll('.nav_dropdawn-content')
+
+button.forEach(el => {
+el.addEventListener('click', (e) => {
+  button.forEach(el => {el.classList.remove(('bottom_nav-btn--active'))});
+  e.currentTarget.classList.add('bottom_nav-btn--active');
+  drop.forEach(el => {el.classList.remove(('nav_dropdawn-content--active'))})
+  e.currentTarget.closest('li').querySelector('.nav_dropdawn-content').classList.toggle('nav_dropdawn-content--active');
+  });
+});
+
+document.addEventListener('click', (e) => {
+console.log(e.target)
+  if (!e.target.classList.contains('nav_dropdawn-content') && !e.target.classList.contains('bottom_nav-btn')) {
+  button.forEach(el => {el.classList.remove(('bottom_nav-btn--active'))});
+  drop.forEach(el => {el.classList.remove(('nav_dropdawn-content--active'))})
 }
-}
+});
+
+
+// Select
