@@ -21,4 +21,16 @@ console.log(e.target)
 });
 
 
-// Select
+// Burger
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('#header__burger-btn').addEventListener('click', function() {
+      document.querySelector('#menu').classList.toggle('is-active')
+  })
+})
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('#cross__btn').addEventListener('click', function() {
+      document.querySelector('#menu').classList.toggle('is-active')
+  })
+})
