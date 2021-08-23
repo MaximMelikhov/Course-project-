@@ -21,6 +21,7 @@ console.log(e.target)
 });
 
 
+
 // Burger
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -34,3 +35,12 @@ window.addEventListener('DOMContentLoaded', function() {
       document.querySelector('#menu').classList.toggle('is-active')
   })
 })
+
+
+// Scroll
+
+new SimpleBar(document.getElementById('myScrollone'), { autoHide: false });
+new SimpleBar(document.getElementById('myScrolltwo'), { autoHide: false });
+new SimpleBar(document.getElementById('myScrollthree'), { autoHide: false });
+new SimpleBar(document.getElementById('myScrollfour'), { autoHide: false });
+new SimpleBar(document.getElementById('myScrollfive'), { autoHide: false });
