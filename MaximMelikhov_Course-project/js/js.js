@@ -44,3 +44,17 @@ new SimpleBar(document.getElementById('myScrolltwo'), { autoHide: false });
 new SimpleBar(document.getElementById('myScrollthree'), { autoHide: false });
 new SimpleBar(document.getElementById('myScrollfour'), { autoHide: false });
 new SimpleBar(document.getElementById('myScrollfive'), { autoHide: false });
+
+// Header-search
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('#header_search-adaptive').addEventListener('click', function() {
+      document.querySelector('#header_search-form').classList.toggle('is-active')
+  })
+})
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('#header_form-cross').addEventListener('click', function() {
+      document.querySelector('#header_search-form').classList.toggle('is-active')
+  })
+})

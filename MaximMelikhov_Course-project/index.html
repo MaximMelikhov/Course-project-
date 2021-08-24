@@ -69,8 +69,8 @@
       <div class="logo">
         <a href="#" class="logo_link">
         <picture>
-          <source media="(max-width: 420px)" srcset="./image/logo_320.svg">
-          <source media="(max-width: 1024px)" srcset="./image/logo_adaptive.svg">
+          <source media="(max-width: 767px)" srcset="./image/logo_320.svg">
+          <source media="(max-width: 1200px)" srcset="./image/logo_adaptive.svg">
           <source media="(max-width: 1400px)" srcset="./image/logo_320.svg">
           <img src="./image/logo.svg" alt="Логотип">
         </picture>
@@ -103,9 +103,30 @@
         </ul>
       </nav>
 
-      <button class="header_search-adaptive">
-        <img src="./image/Search_adaptive.svg" alt="">
-      </button>
+      <div class="header_search-form">
+        <button id="header_search-adaptive" class="header_search-adaptive">
+          <svg class="header_search-svg" width="29" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+            </svg>
+        </button>
+
+        <form id="header_search-form" class="header_search-adaptive-active is-active" >
+          <button type="submit" class="header_search-adaptive-btn">
+            <svg class="header_search-svg" width="29" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+              </svg>
+          </button>
+          <input type="search" class="header_search-adaptive-input">
+          <button type="button" id="header_form-cross" class="header_search-adaptive-cross">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666885 15.3045L15.3336 0.000275917L16.0002 0.695923L1.33355 16.0002L0.666885 15.3045Z" fill="black"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+              </svg>
+          </button>
+        </form>
+      </div> 
 
       <div class="entry_block">
         <a href="#" class="entry_link">
