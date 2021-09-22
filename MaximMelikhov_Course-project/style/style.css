@@ -1231,12 +1231,16 @@ input[type="search"]:focus {
 .swiper {
   position: absolute;
   overflow: hidden;
-  width: 1150px;
+  max-width: 1150px;
   height: 850px;
 }
 
+.swiper-wrapper {
+  width: 100%;
+}
+
 .swiper .swiper-slide-gallery {
-  height: 350px;
+  max-height: 350px;
   overflow: hidden;
 }
 
