@@ -58,3 +58,25 @@ window.addEventListener('DOMContentLoaded', function() {
       document.querySelector('#header_search-form').classList.toggle('is-active')
   })
 })
+
+// select
+
+const element = document.querySelector('select');
+const choices = new Choices(element, {
+searchEnabled: false
+});
+
+// swiper gallery
+
+new Swiper('.swiper',{
+  autoHeight: false,
+  slidesPerView: 3,
+  slidesPerColumn: 2,
+  spaceBetween: 50,
+  loop: true,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="./style/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./style/simplebar.css"/>
+  <link rel="stylesheet" href="./style/choices.min.css">
 
   <title>Blanchard</title>
 </head>
@@ -402,63 +403,70 @@
 
     <!-- Gallery  -->
 
-<!-- <section class="gallery">
-    <div class="container container_gallery">
-      <div class="gallery_left">
-        <h2 class="medium_title medium_title_gallery">Галерея</h2>
+    <section class="gallery">
+      <div class="container gallery_container">
+        <div class="gallery_left">
+          <h2 class="medium_title medium_title-gallery">Галерея</h2>
 
+          <h4 class="subtitle_gallery">Фильтр:</h4>
 
-        <p class="filter_title">Фильтр:</p>
-        <div class="select_block">
-          <select name="select">
-            <option value="">Живопись</option>
-            <option value="">Рисунок</option>
-            <option value="">Скульптура</option>
-          </select>
+          <div class="select_block-gallery">
+            <select class="select_gallery" name="select">
+              <option>Живопись</option>
+              <option>Рисунок</option>
+              <option>Скульптура</option>
+            </select>
+          </div>   
+
+          <div class="gallery_desc">
+            <p>Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний 
+            <a href="">авторизуйтесь</a>, либо воспользуйтесь лицензией.</p>
+          </div>
         </div>
 
-        <p class="gallery_descr">
-          Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="#" class="gallery_login">авторизуйтесь</a>, либо воспользуйтесь лицензией.
-        </p>
+        <div class="gallery_right">
+          <div class="gallery_pagination">
+            <button class="gallery_pagination-btn">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 11L0.999995 6L6 0.999998" stroke="white"/>
+                </svg>
+            </button>
+            <span class="gallery_pagination-span">1 / 2</span>
+            <button class="gallery_pagination-btn">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 11L6.00001 6L1 0.999997" stroke="white"/>
+                </svg>
+            </button>
+          </div>
+
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-one">Slide 1</div>
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-two">Slide 2</div>
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-three">Slide 3</div>
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-one">Slide 1</div>
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-two">Slide 2</div>
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-three">Slide 3</div>
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-one">Slide 1</div>
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-two">Slide 2</div>
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-three">Slide 3</div>
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-one">Slide 1</div>
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-two">Slide 2</div>
+              <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery-three">Slide 3</div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-scrollbar"></div>
+          </div>
+
+
+        </div>
+
       </div>
-
-      <div class="gallery_right">
-      <span class="gallery_pagination">1 / 2</span> 
-
-        <ul class="gallery_list">
-          <li class="gallery_item">
-            <img src="./image/gallery_picture_one.jpg" alt="">
-          </li>
-          <li class="gallery_item">
-            <img src="./image/gallery_picture_two.jpg" alt="">
-          </li>
-          <li class="gallery_item">
-            <img src="./image/gallery_picture_three.jpg" alt="">
-          </li>
-          <li class="gallery_item">
-            <img src="./image/gallery_picture_four.jpg" alt="">
-          </li>
-          <li class="gallery_item">
-            <img src="./image/gallery_picture_five.jpg" alt="">
-          </li>
-          <li class="gallery_item">
-            <img src="./image/gallery_picture_six.jpg" alt="">
-          </li>
-        </ul>
-      </div>  
-
-    </div>
-  </section> -->
-
-    <!-- Catalog -->
-
-  <!-- <section class="catalog">
-    <div class="container">
-      <h2 class="medium_title">Каталог</h2>
-
-      <p>A</p>
-    </div>
-  </section> -->
+    </section>
 
 
 
@@ -481,6 +489,7 @@
 
 
   <script src="./js/simplebar.min.js"></script>
+  <script src="./js/choices.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper-container', {
@@ -494,6 +503,7 @@
   },
 });
   </script>
+
   <script src="./js/js.js"></script>
 </body>
 </html>
