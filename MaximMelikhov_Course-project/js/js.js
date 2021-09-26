@@ -68,15 +68,49 @@ searchEnabled: false
 
 // swiper gallery
 
-new Swiper('.swiper',{
-  autoHeight: false,
+new Swiper(".gallery_right", {
   slidesPerView: 3,
-  slidesPerColumn: 2,
-  spaceBetween: 50,
-  loop: true,
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+  slidesPerGroup: 3,
+  grid: {
+    rows: 3
   },
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination--right",
+    type: "fraction"
+  },
+  navigation: {
+    nextEl: ".swiper-btn--next",
+    prevEl: ".swiper-btn--prev"
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 0
+    },
+    576: {
+      slidesPerView: 2,
+      grid: {
+        rows: 2
+      },
+      spaceBetween: 30
+    },
+
+    1200: {
+      slidesPerView: 3,
+      grid: {
+        rows: 2
+      },
+      spaceBetween: 50
+    }
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущий',
+    nextSlideMessage: 'Следующий',
+  }
 });
