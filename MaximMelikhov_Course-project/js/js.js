@@ -114,3 +114,24 @@ new Swiper(".gallery_right", {
     nextSlideMessage: 'Следующий',
   }
 });
+
+// catalog
+
+$( function() {
+  $( ".ac--list" ).accordion({
+    icons: false,
+    heightStyle: "content",
+    collapsible: true,
+    active: false
+  });
+    $(".heading-item--btn").click(function(e) {
+      let path = e.currentTarget.dataset.path
+      $(".tab-content").removeClass("tab-active");
+      $(".heading-item--btn").removeClass("btn-active")
+      $(`[data-target='${path}']`).addClass("tab-active");
+      $(this).addClass("btn-active");
+      $(`[data-target='${path}']`).find($(".ac--list")).accordion({
+        active: 0
+      })
+    })
+});
