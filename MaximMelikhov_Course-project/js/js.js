@@ -85,14 +85,14 @@ new Swiper(".gallery_right", {
   },
 
   breakpoints: {
-    320: {
+    240: {
       slidesPerView: 1,
       grid: {
         rows: 1
       },
       spaceBetween: 0
     },
-    576: {
+    767: {
       slidesPerView: 2,
       grid: {
         rows: 2
