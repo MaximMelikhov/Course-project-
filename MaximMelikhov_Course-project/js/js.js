@@ -134,4 +134,25 @@ $( function() {
         active: 0
       })
     })
+
+    document.querySelectorAll(".tab-content").forEach(item => {
+      let btns = item.querySelectorAll(".ac_date_item-tab");
+      let articles = item.querySelectorAll(".article-content");
+      btns.forEach(el => {
+        el.addEventListener("click",function(e) {
+          let path = e.currentTarget.dataset.path;
+          let tabCont = item.querySelector(`[data-target='${path}']`);
+          console.log(tabCont)
+          articles.forEach(el => {
+            el.classList.remove("article-tabActive")
+          })
+          btns.forEach(el => {
+            el.classList.remove("article-btn-active")
+          })
+          tabCont.classList.add("article-tabActive")
+          this.classList.add("article-btn-active");
+        })
+      })
+    })
+  
 });

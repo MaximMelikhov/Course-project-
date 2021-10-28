@@ -1910,7 +1910,7 @@ input[type="search"]:focus-visible {
   height: 300px;
 }
 
-.ac_date-item {
+.ac_date_item-tab {
   font-size: 16px;
   font-weight: 400;
   background-color: transparent;
@@ -1920,19 +1920,19 @@ input[type="search"]:focus-visible {
   cursor: pointer;
 }
 
-.ac_date-item:hover {
+.ac_date_item-tab:hover {
   color: var(--color-violet_hover);
   border-bottom: 1px solid var(--color-violet_hover);
   transition: color 0.3s ease-in-out;
 }
 
-.ac_date-item:active {
+.ac_date_item-tab:active {
   color: var(--color-violet);
   border-bottom: none;
   transition: color 0.3s ease-in-out;
 }
 
-.ac_date-item:focus-visible:not(:active) {
+.ac_date_item-tab:focus-visible:not(:active) {
   padding: 2px;
   background-color: var(--color-violet_d);
   color: var(--color-white);
@@ -1945,11 +1945,24 @@ input[type="search"]:focus-visible {
   height: 470px;
 }
 
+.article-content.article-tabActive {
+  display: block;
+}
+
 .article-content {
+  display: none;
   max-width: 750px;
   width: 100%;
   margin-right: 50px;
 }
+
+.article-content-date {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
 
 
 @media (max-width: 1200px) {
