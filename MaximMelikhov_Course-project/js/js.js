@@ -57,6 +57,12 @@ window.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#header_form-cross').addEventListener('click', function() {
       document.querySelector('#header_search-form').classList.toggle('is-active')
   })
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".header_search-form")) {
+      document.querySelector(".header_search-adaptive-active").classList.add("is-active")
+    }
+  })
 })
 
 // select

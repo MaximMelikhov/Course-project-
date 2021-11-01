@@ -729,6 +729,15 @@ body {
   transform: translateY(-1px);
 }
 
+.bottom_nav-btn svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.bottom_nav-btn:focus svg{
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
 .bottom_nav-btn:hover {
   color: var(--color-violet_hover);
   transition: color 0.3s ease-in-out;
@@ -1182,7 +1191,8 @@ input[type="search"]:focus-visible {
   }
   
   .hero_button {
-    margin-left: 47px;
+    left: 50%;
+    transform: translate(-50%, 0);
     padding: 12px 17px;
     font-size: 12px;
     font-weight: 700;
@@ -1627,7 +1637,9 @@ input[type="search"]:focus-visible {
   }
 
   .gallery_desc-adaptive {
-    min-width: 280px;
+    max-width: 280px;
+    width: 100%;
+    transform: translateY(-4px);
   }
 }
 
@@ -1835,6 +1847,7 @@ input[type="search"]:focus-visible {
   transition: .2s ease-in-out;
 }
 
+
 .ac--list__item-top:hover, .ac--list__item-top:focus-visible {
   border-color: var(--color-violet_hover);
   position: relative;
@@ -1856,6 +1869,10 @@ input[type="search"]:focus-visible {
   background-color: var(--color-violet_hover);
   border-color: var(--color-violet);
   color: #fff;
+}
+
+.ac--list__item-top:focus .ac-list__item-btn {
+  border: 2px solid var(--color-violet);
 }
 
 .ac--list__item-top:hover h3  {
@@ -2084,9 +2101,16 @@ input[type="search"]:focus-visible {
   }
   
   .ac-list__item-btn {
+    margin-right: 3px;
     margin-top: 11px;
     width: 30px;
     height: 30px;
+  }
+
+  .ac-list__item-btn svg {
+    width: 10px;
+    height: 10px;
+    transform: translateY(-2px);
   }
 
   .ac--list__item-bottom {
@@ -2098,4 +2122,15 @@ input[type="search"]:focus-visible {
     margin-bottom: 20px;
   }
 
+  .article-content-desc {
+    max-width: 286px;
+    width: 100%;
+  }
+
+  .article-content-date {
+    margin-bottom: 9px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #999999;
+  }
 }
