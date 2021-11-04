@@ -162,3 +162,16 @@ $( function() {
     })
   
 });
+
+// events
+
+let btn = document.querySelector(".events_btn");
+let allitems = document.querySelectorAll(".events_item");
+btn.addEventListener("click", function() {
+  allitems.forEach(item => {
+    item.style.display = "block";
+  })
+  
+  this.style.display = "none";
+  
+})
