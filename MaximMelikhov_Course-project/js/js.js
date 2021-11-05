@@ -174,4 +174,25 @@ btn.addEventListener("click", function() {
   
   this.style.display = "none";
   
-})
+});
+
+new Swiper(".events_block", {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 0,
+  pagination: {
+    el: ".swiper-pagination--right",
+    type: "fraction"
+  },
+  navigation: {
+    nextEl: ".swiper-btn--next",
+    prevEl: ".swiper-btn--prev"
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущий',
+    nextSlideMessage: 'Следующий',
+  }
+});
+
+
