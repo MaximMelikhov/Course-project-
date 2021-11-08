@@ -166,6 +166,7 @@ $( function() {
 // events
 
 let btn = document.querySelector(".events_btn");
+const slider = document.querySelector('.events_block');
 let allitems = document.querySelectorAll(".events_item");
 btn.addEventListener("click", function() {
   allitems.forEach(item => {
@@ -174,25 +175,39 @@ btn.addEventListener("click", function() {
   
   this.style.display = "none";
   
-});
+})
 
-new Swiper(".events_block", {
-  slidesPerView: 1,
-  slidesPerGroup: 1,
-  spaceBetween: 0,
-  pagination: {
-    el: ".swiper-pagination--right",
-    type: "fraction"
-  },
-  navigation: {
-    nextEl: ".swiper-btn--next",
-    prevEl: ".swiper-btn--prev"
-  },
 
-  a11y: {
-    prevSlideMessage: 'Предыдущий',
-    nextSlideMessage: 'Следующий',
-  }
+let mySwiper;
+
+function mobileSlider() {
+	if (window.innerWidth <= 320 && slider.dataset.mobile == 'false') {
+		mySwiper = new Swiper(slider, {
+			slidesPerView: 0,
+			spaceBetween: 10,
+			loop: true,
+			slideClass: 'events_item',
+			pagination: {
+				el: '.newSwiper-pagination',
+				clickable: true,
+			},
+		});
+
+		slider.dataset.mobile = 'true';
+	}
+
+	if (window.innerWidth > 320 && slider.dataset.mobile == 'true') {
+		slider.dataset.mobile = 'false';
+		if (slider.classList.contains('swiper-container-initialized')) {
+			mySwiper.destroy();
+		}
+	}
+}
+
+mobileSlider()
+
+window.addEventListener('resize', () => {
+	mobileSlider();
 });
 
 

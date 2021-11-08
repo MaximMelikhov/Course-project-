@@ -1957,6 +1957,7 @@ input[type="search"]:focus-visible {
 }
 
 .article-content__img {
+  object-fit: cover;
   margin-bottom: 30px;
   max-width: 750px;
   width: 100%;
@@ -1975,10 +1976,10 @@ input[type="search"]:focus-visible {
 }
 
 .article-content-date {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   margin-bottom: 1px;
-  color: #333333;
+  color: #999999;
 }
 
 
@@ -2166,17 +2167,19 @@ input[type="search"]:focus-visible {
   gap: 50px;
 }
 
-.events_item {
+.events .events_item {
   padding-left: 50px;
   padding-right: 40px;
   position: relative;
   padding-top: 313px;
   padding-bottom: 70px;
+  height: auto;
   display: block;
   width: calc((100% - 52px*2) / 3);
   border: 1px solid #CACACA;
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: contain;
 }
 
 .events_item:not(:nth-child(-n + 3)) {
@@ -2273,9 +2276,6 @@ input[type="search"]:focus-visible {
 
 /* swiper-events */
 
-.events .events_swiper-wrapper {
-  display: none;
-}
 
 @media (max-width: 1024px) {
   .events_list {
@@ -2362,33 +2362,13 @@ input[type="search"]:focus-visible {
 }
 
 @media (max-width: 320px) {
-  .events_list {
-    display: none;
-  }
-  
-  .events_btn {
-    display: none;
-  }
-
-  .events .events_swiper-wrapper {
-    display: block;
-    max-width: 290px;
-    width: 100%;
-  }
-
-  .events .events_block {
-    max-width: 290px;
-    width: 100%;
-    overflow: hidden;
-    height: 760px;
-  }
-  
-  .events .swiper_slide-events {
-    width: 290px;
-  }
 
   .events_medium-title {
     margin-bottom: 16px;
+  }
+
+  .events_list {
+    gap: 1px;
   }
 
   .events .events_item {
@@ -2398,6 +2378,8 @@ input[type="search"]:focus-visible {
     padding-right: 18px;
     padding-top: 216px;
     padding-bottom: 56px;
+    margin: 0;
+		flex-shrink: 0;
   }
 
   .events_subtitle {
@@ -2432,4 +2414,16 @@ input[type="search"]:focus-visible {
   .events_item-five {
     background-image: url('../image/events_img-5-320.jpg');
   }
+
+  .events .slider-container {
+    overflow: hidden;
+    max-width: 290px;
+    width: 100%;
+  }
+
+	.events .slider-container .swiper-wrapper {
+		justify-content: initial;
+		flex-wrap: nowrap;
+	}
+
 }
