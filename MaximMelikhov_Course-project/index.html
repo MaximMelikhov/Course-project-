@@ -984,7 +984,7 @@
       <div class="container">
         <h2 class="medium_title events_medium-title">События</h2>
 
-        <div class="slider-container events_block" data-mobile="false">
+        <div class="newSwiper slider-container events_block" data-mobile="false">
           <ul class="swiper-wrapper events_list">
             <li class="events_item events_item-one swiper-slide">
               <span class="events_desc">
@@ -1049,13 +1049,213 @@
           <div class="newSwiper-pagination swiper-pagination"></div>
         </div>
         <button class="events_btn">Все события</button>
-
-
-
-
       </div>
     </section>
 
+    <section class="editions">
+      <div class="container editions_container">
+        <div class="editions_left-block">
+          <h2 class="medium_title editions_medium-title">Издания</h2>
+
+          <!-- <div class="checkbox-container">
+            <h2 class="h4-click" tabindex="0">
+              Заголовок категории - нажмите на меня
+            </h2>
+            <ul class="checkbox-list">
+              <li class="checkbox-list--item">
+                <label  class="checkbox--label">
+                  <input type="checkbox" class="checkbox" />
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-checkbox--text">Первый чекбокс</span>
+                </label>
+              </li>
+              <li class="checkbox-list--item">
+                <label class="checkbox--label">
+                  <input type="checkbox" class="checkbox" />
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-checkbox--text">Второй чекбокс</span>
+                </label>
+              </li>
+              <li class="checkbox-list--item">
+                <label class="checkbox--label">
+                  <input type="checkbox" class="checkbox" />
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-checkbox--text">Третий чекбокс</span>
+                </label>
+              </li>
+              <li class="checkbox-list--item">
+                <label class="checkbox--label">
+                  <input type="checkbox" class="checkbox" />
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-checkbox--text">Четвертый чекбокс</span>
+                </label>
+              </li>
+            </ul>
+          </div> -->
+
+
+          <h4 class="subtitile-editions">Категории</h4>
+          <div class="editions_checkbox">
+
+            <label for="chec_one">
+              <input class="editions-label" type="checkbox" id="chec_one">
+              Бестселлеры
+              <span></span>
+            </label>
+
+            <label for="chec_two">
+              <input class="editions-label" type="checkbox" id="chec_two">
+              Искусство
+              <span></span>
+            </label>
+
+            <label for="chec_three">
+              <input class="editions-label" type="checkbox" id="chec_three">
+              Архитектура
+              <span></span>
+            </label>
+
+            <label for="chec_four">
+              <input class="editions-label" type="checkbox" id="chec_four">
+              Дизайн
+              <span></span>
+            </label>
+
+            <label for="chec_five">
+              <input class="editions-label" type="checkbox" id="chec_five">
+              Мода
+              <span></span>
+            </label>
+
+            <label for="chec_six">
+              <input class="editions-label" type="checkbox" id="chec_six">
+              Детям
+              <span></span>
+            </label>
+
+            <label for="chec_seven" style="width: 250px;">
+              <input class="editions-label editions-label-seven" type="checkbox" id="chec_seven">
+              Художественная литература
+              <span></span>
+            </label>
+
+            <label for="chec_eight">
+              <input class="editions-label" type="checkbox" id="chec_eight">
+              Публицистика
+              <span></span>
+            </label>
+
+            <label for="chec_nine">
+              <input class="editions-label" type="checkbox" id="chec_nine">
+              Путеводители
+              <span></span>
+            </label>
+
+            <label for="chec_ten">
+              <input class="editions-label" type="checkbox" id="chec_ten">
+              Философия
+              <span></span>
+            </label>
+
+            <label for="chec_eleven">
+              <input class="editions-label" type="checkbox" id="chec_eleven">
+              Учебная литература
+              <span></span>
+            </label>
+
+            <label for="chec_twelve">
+              <input class="editions-label" type="checkbox" id="chec_twelve">
+              Журналы и газеты
+              <span></span>
+            </label>
+
+          </div>
+
+          <div class="editions_price_block">
+            <h4 class="subtitle_editions-price">Цена</h4>
+
+            <fieldset class="editions_fieldset">
+              <label class="editions_price-label" for="price">
+                <span class="editions_price">От</span>  
+                <input class="editions_price-input" type="number" value="50">
+                <span class="editions_price">до</span>  
+                <input class="editions_price-input" type="number" value="25000">
+                <span class="editions_price">руб.</span>  
+              </label>
+            </fieldset>
+        </div>
+        </div>
+
+        <div class="editions_right-block">
+          <div class="newSwiperf swiper"  data-mobile="false">
+
+            <div class="swiper-right-btns editions_swiper-right-btns">
+              <button class="sw-btn swiper-btn--prev">
+                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 11L0.999995 6L6 0.999998" stroke="white"/>
+                  </svg>
+              </button>
+              <div class="swiper-pagination--right">
+                <span class="swiper-pagination-current">1</span>
+                /
+                <span class="swiper-pagination-current">5</span>
+              </div>
+              <button class="sw-btn swiper-btn--next">
+                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 11L6.00001 6L1 0.999997" stroke="white"/>
+                  </svg>
+              </button>
+            </div>
+            <ul class="editions_swiper-list swiper-wrapper">
+            <li class="editions_swiper-item editions_swiper-item-one swiper-slide">
+              <h4 class="subtitle_editions-name">Искусство цвета</h4>
+              <span class="editions_card-desc">Иттен, Иоханнес</span>
+              <span class="editions_card-price">620 руб</span>
+              <button class="editions_card-btn">Заказать</button>
+            </li>
+            <li class="editions_swiper-item editions_swiper-item-two swiper-slide">
+              <h4 class="subtitle_editions-name">Типографика</h4>
+              <span class="editions_card-desc">Рудер, Эмиль </span>
+              <span class="editions_card-price">2 450 руб</span>
+              <button class="editions_card-btn">Заказать</button>
+            </li>
+            <li class="editions_swiper-item editions_swiper-item-three swiper-slide">
+              <h4 class="subtitle_editions-name">Книга про буквы</h4>
+              <span class="editions_card-desc">Гордон, Юрий </span>
+              <span class="editions_card-price">2 200 руб</span>
+              <button class="editions_card-btn">Заказать</button>
+            </li>
+            <li class="editions_swiper-item editions_swiper-item-four swiper-slide">
+              <h4 class="subtitle_editions-name">Николай Ильин</h4>
+              <span class="editions_card-desc">Кричевский, Владимир</span>
+              <span class="editions_card-price">1 100 руб</span>
+              <button class="editions_card-btn">Заказать</button>
+            </li>
+            <li class="editions_swiper-item editions_swiper-item-five swiper-slide">
+              <h4 class="subtitle_editions-name">Модульные сетки в граф...</h4>
+              <span class="editions_card-desc">Мюллер-Брокманн, Йозеф </span>
+              <span class="editions_card-price">1 450 руб</span>
+              <button class="editions_card-btn">Заказать</button>
+            </li>
+            <li class="editions_swiper-item editions_swiper-item-six swiper-slide">
+              <h4 class="subtitle_editions-name">Эволюция графических ст...</h4>
+              <span class="editions_card-desc">Хеллер, Чваст</span>
+              <span class="editions_card-price">3 200 руб</span>
+              <button class="editions_card-btn">Заказать</button>
+            </li>
+            <li class="editions_swiper-item editions_swiper-item-seven swiper-slide">
+              <h4 class="subtitle_editions-name">Искусство и визуальное в...</h4>
+              <span class="editions_card-desc">Арнхейм, Рудольф </span>
+              <span class="editions_card-price">2 200 руб</span>
+              <button class="editions_card-btn">Заказать</button>
+            </li>
+          </ul>
+          </div>
+        </div>
+        
+
+      </div>
+    </section>
 
 
   </main>
@@ -1091,6 +1291,7 @@
   },
 });
   </script>
+  
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="./js/js.js"></script>
