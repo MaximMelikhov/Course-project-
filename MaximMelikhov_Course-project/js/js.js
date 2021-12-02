@@ -222,7 +222,7 @@ let mySwipereditors;
 
 function initSlide() {
 		mySwipereditions = new Swiper(slidereditions, {
-			slidesPerView: 3,
+			slidesPerView: 1,
 			spaceBetween: 50,
       slidesPerGroup: 2,
 			loop: true,
@@ -237,7 +237,7 @@ function initSlide() {
       },
       breakpoints: {
         1400: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           grid: {
             rows: 1
           },
@@ -274,69 +274,70 @@ mySwipereditions.on('resize', function (e) {
 
 
 
-// let button = ".h2-click";
-// let labels = ".checkbox--label";
-// let labelsList = ".checkbox-list";
-// let labelsListActive = "checklist-active";
-// let labelActive = "checkbox--label-active";
-// let animationClass = "animation-test";
-// let inputCheckbox = ".checkbox";
+let btnn = document.querySelector(".subtitile-editions");
+let checklist = document.querySelector(".editions_checkbox");
+btnn.addEventListener("click", function() {
+  checklist.classList.toggle("checklist__active");
+  document.querySelectorAll(".editions_checkbox-label").forEach(el => {
+    el.classList.toggle("active");
+    let checkbox = el.querySelector(".editions-label");
 
-// function checkboxToggle(a, b, c, labelsListActive, labelActive, animationClass, inputCheckbox) {
-//   let btn = document.querySelector(a);
-//   let labels = document.querySelectorAll(b);
-//   let listLabels = document.querySelector(c);
-// btn.addEventListener("click", toggleSpoiler);
-//   btn.addEventListener("keyup", function(e) {
-//     console.log(e.key);
-//     if (e.code === "Enter") {
-//       toggleSpoiler();
-//     }
-//   })    
-// function toggleSpoiler() {
-//     if (!listLabels.classList.contains(labelsListActive)) {
-//     listLabels.classList.add(labelsListActive);
-//     labels.forEach(item => {
-//      // item.classList.add("checkbox--label-active");
-//       animationItem(item, labelActive, animationClass, "add");
-//     })
-//   } else {
-//     listLabels.classList.remove(labelsListActive);
-//     labels.forEach(item => {
-//     	if (item.querySelector(inputCheckbox).checked) {
-//     	animationItem(item, labelActive, animationClass, "add");
-//       } else {
-//         animationItem(item, labelActive, animationClass, "remove");
-//       }
-//       });
-//   }
-//   labels.forEach(item => {
-//     item.addEventListener("click", function() {
-//       if (!listLabels.classList.contains(labelsListActive)) {
-//         animationItem(this, labelActive, animationClass, "remove");
-//       }
-//     });
-//   })
-// }
-// function animationItem(item, class1, class2, f) {
-//  if (f === "add") {
-//     item.classList.add(class1);
-//   setTimeout(function() {
-//     item.classList.add(class2)
-//   }, 100);
+    if (checkbox.checked) {
+      el.classList.add("active");
+    } 
+  })
+});
 
-//  } else {
-//      item.classList.remove(class2);
-//   setTimeout(function() {
-//     item.classList.remove(class1)
-//   }, 300);
-//   }
- 
-// }
+document.querySelectorAll(".editions_checkbox-label").forEach(el => {
+  el.addEventListener("click", function() {
+    let label = this;
+    if (!checklist.classList.contains("checklist__active")) {
+      label.classList.remove("active");
+    } 
+  });
+})
 
 
-// }
+// projects
 
 
+let projectsSlider = new Swiper(".projects_swiper", {
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".projects_swiper-button-next",
+    prevEl: ".projects_swiper-button-prev"
+  },
 
-// checkboxToggle(button, labels, labelsList, labelsListActive, labelActive, animationClass, inputCheckbox);
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 0,
+    },
+    767: {
+      slidesPerView: 2,
+  slidesPerGroup: 1,
+  spaceBetween: 15,
+    },
+    1024: {
+      slidesPerView: 2,
+  slidesPerGroup: 1,
+  spaceBetween: 50,
+    },
+    1200: {
+      slidesPerView: 3,
+  slidesPerGroup: 1,
+  spaceBetween: 30,
+    }
+
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущий',
+    nextSlideMessage: 'Следующий',
+  }
+
+});
