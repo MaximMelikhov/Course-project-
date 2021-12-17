@@ -574,13 +574,13 @@
           <h2 class="medium_title medium_title-catalog">Каталог</h2>
           <ul class="heading-ul">
             <li class="heading-item">
-              <button class="heading-item--btn heading-item--btn-france btn-active" data-path="active-block"></button>
+              <button class="heading-item--btn heading-item--btn-france" data-path="another"></button>
             </li>
             <li class="heading-item">
               <button class="heading-item--btn heading-item--btn-germany" data-path="another"></button>
             </li>
             <li class="heading-item">
-              <button class="heading-item--btn heading-item--btn-italy" data-path="another"></button>
+              <button class="heading-item--btn heading-item--btn-italy btn-active" data-path="active-block"></button>
             </li>
             <li class="heading-item">
               <button class="heading-item--btn heading-item--btn-russia" data-path="another"></button>
@@ -648,15 +648,15 @@
                 <button class="ac_date_item-tab" data-path="other">Веккьетта</button>
               </li>
               <li>
-                <button class="ac_date_item-tab" data-path="first">Андреа Верроккьо
+                <button class="ac_date_item-tab" data-path="other">Андреа Верроккьо
                 </button>
               </li>
               <li>
-                <button class="ac_date_item-tab" data-path="other">Доменико Гирландайо
+                <button class="ac_date_item-tab" data-path="first">Доменико Гирландайо
                 </button>
               </li>
               <li>
-                <button class="ac_date_item-tab" data-path="first">Беноццо Гоццоли
+                <button class="ac_date_item-tab" data-path="other">Беноццо Гоццоли
                 </button>
               </li>
               <li>
@@ -984,7 +984,7 @@
       <div class="container">
         <h2 class="medium_title events_medium-title">События</h2>
 
-        <div class="newSwiper slider-container events_block" data-mobile="false">
+        <div class="newSwiper slider-container events_block">
           <ul class="swiper-wrapper events_list">
             <li class="events_item events_item-one swiper-slide">
               <span class="events_desc">
@@ -1048,7 +1048,6 @@
           </ul>
           <div class="newSwiper-pagination swiper-pagination"></div>
         </div>
-        <button class="events_btn">Все события</button>
       </div>
     </section>
 
@@ -1139,9 +1138,9 @@
             <fieldset class="editions_fieldset">
               <label class="editions_price-label" for="price">
                 <span class="editions_price">От</span>  
-                <input class="editions_price-input" type="number" value="50">
+                <input class="editions_price-input" type="text" placeholder="50">
                 <span class="editions_price">до</span>  
-                <input class="editions_price-input" type="number" value="25000">
+                <input class="editions_price-input" type="text" placeholder="25 000">
                 <span class="editions_price">руб.</span>  
               </label>
             </fieldset>
@@ -1152,7 +1151,7 @@
           <div class="newSwiperf swiper"  data-mobile="false">
 
             <div class="swiper-right-btns editions_swiper-right-btns">
-              <button class="sw-btn swiper-btn--prev">
+              <button class="sw-btn editions_swiper-btn--prev">
                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 11L0.999995 6L6 0.999998" stroke="white"/>
                   </svg>
@@ -1162,7 +1161,7 @@
                 /
                 <span class="swiper-pagination-current">5</span>
               </div>
-              <button class="sw-btn swiper-btn--next">
+              <button class="sw-btn editions_swiper-btn--next">
                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 11L6.00001 6L1 0.999997" stroke="white"/>
                   </svg>
