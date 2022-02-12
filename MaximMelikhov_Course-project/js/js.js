@@ -173,8 +173,8 @@ new Swiper(".events_block", {
   },
   spaceBetween: 30,
   pagination: {
-    el: ".swiper-pagination--right",
-    type: "fraction"
+    el: ".events-swiper-pagination--right",
+    type: "none"
   },
   navigation: {
     nextEl: ".events_swiper-btn--next",

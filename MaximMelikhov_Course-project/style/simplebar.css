@@ -21,8 +21,8 @@
     padding: 0;
     margin: 0;
     left: 0;
-    top: 0;
-    bottom: 0;
+    top: 20px;
+    bottom: 20px;
     right: 0;
     width: auto !important;
     height: auto !important;
@@ -36,7 +36,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
     padding: 0;
     margin: 0;
@@ -117,9 +116,9 @@
 
 .simplebar-scrollbar {
     position: absolute;
-    right: 1px;
-    width: 1px;
-    height: 5px;
+    right: 0;
+    width: 2px;
+    height: 28px !important;
 }
 
 .simplebar-scrollbar:before {
@@ -139,7 +138,7 @@
 
 .simplebar-track {
     right: 10px;
-    height: 210px;
+    height: 225px;
 }
 
 .simplebar-track .simplebar-scrollbar.simplebar-visible:before {
@@ -149,7 +148,7 @@
 }
 
 .simplebar-track.simplebar-vertical {
-    top: 42px;
+    top: 32px;
     width: 2px;
 }
 

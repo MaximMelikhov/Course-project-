@@ -729,8 +729,12 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-.bottom_nav-btn:focus svg{
+.bottom_nav-btn--active svg {
   transform: rotate(180deg);
+
+}
+
+.bottom_nav-btn:focus-visible svg{
   transition: transform 0.3s ease-in-out;
 }
 
@@ -768,7 +772,7 @@ body {
 .nav_dropdawn-content {
   display: none;
   position: absolute;
-  padding: 40px;
+  padding: 10px 40px 20px 40px;
   background-color: rgba(0, 0, 0, 0.404);
   width: 300px;
   height: 280px;
@@ -798,6 +802,7 @@ body {
 
 .nav_dropdawn-item {
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .nav_dropdawn-item:last-child {
@@ -884,10 +889,14 @@ body {
   background-image: url('../image/nav_bg_balla.png');
 } 
 
+
+
 .simplebar-scrollbar {
   width: 2px;
+  height: 28px;
   background-color: var(--color-white);
 }
+
 
 .simplebar-visible {
   background-color: var(--color-white);
@@ -2162,6 +2171,7 @@ input[type="search"]:focus-visible {
 /* events */
 
 .events {
+  position: relative;
   padding-bottom: 30px;
 }
 
@@ -2170,6 +2180,7 @@ input[type="search"]:focus-visible {
 }
 
 .events_block {
+  position: relative;
   max-width: 1600px;
   width: 100%;
   overflow: hidden;
@@ -2182,7 +2193,6 @@ input[type="search"]:focus-visible {
   flex-wrap: nowrap;
   gap: 0;
 }
-
 
 .events_block .events_item {
   padding-left: 50px;
@@ -2198,8 +2208,6 @@ input[type="search"]:focus-visible {
   background-position: top center;
   background-size: auto;
 }
-
-
 
 .events_item-one {
   background-image: url('../image/events_img-1.jpg');
@@ -2299,10 +2307,65 @@ input[type="search"]:focus-visible {
   transition: background-color .3s ease-in-out;
 }
 
-
-.newSwiper-pagination.swiper-pagination {
-  display: none;
+.events-swiper-btns {
+  position: absolute;
+  max-width: 1600px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 10;
 }
+
+.events_swiper-btn--prev,
+.events_swiper-btn--next {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgba(236, 236, 236, 0.5);
+  z-index: 10;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out;
+}
+
+.events_swiper-btn--prev:hover,
+.events_swiper-btn--next:hover {
+  background-color: #D1A9F0;
+  transition: background-color .2s ease-in-out;
+}
+
+.events_swiper-btn--prev:active,
+.events_swiper-btn--next:active {
+  background-color: #D1A9F0;
+  border: #7943A4 solid 2px;
+  transition: background-color .2s ease-in-out;
+}
+
+.events_swiper-btn--prev:focus-visible,
+.events_swiper-btn--next:focus-visible {
+  border: #7943A4 solid 2px;
+}
+
+.events_swiper-btn--prev {
+  padding-top: 4px;
+  padding-right: 3px;
+  position: absolute;
+  left: -25px;
+  top: 50%;
+}
+
+.events_swiper-btn--prev svg {
+  transform: rotate(180deg);
+}
+
+.events_swiper-btn--next {
+  padding-top: 4px;
+  padding-left: 3px;
+  position: absolute;
+  right: -25px;
+  top: 50%;
+}
+
 
 
 @media (max-width: 1024px) {
@@ -2550,6 +2613,7 @@ input[type="search"]:focus-visible {
 label:active .editions-label {
   color: #7943A4;
 }
+
 
 .editions_checkbox label:focus-visible {
   color: var(--color-violet_hover);
@@ -3057,14 +3121,12 @@ fieldset {
   display:  inline-block;
   width: 16px;
   height: 16px;
-  background-color: #9D5CD0;
   border-radius: 14px;
-  background-image: url(../image/icon_tooltipe.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
   cursor: pointer;
   margin-left: 2px;
   transition: background-color .2s ease-in-out;
+  border: none;
+  background-color: transparent;
 } 
 
 .icon-tooltipe:hover {
