@@ -1,22 +1,22 @@
 // Bottom_nav
 
 const button = document.querySelectorAll('button');
-const drop = document.querySelectorAll('.nav_dropdawn-content')
+const drop = document.querySelectorAll('.nav-dropdawn-content')
 
 button.forEach(el => {
 el.addEventListener('click', (e) => {
-  button.forEach(el => {el.classList.remove(('bottom_nav-btn--active'))});
-  e.currentTarget.classList.add('bottom_nav-btn--active');
-  drop.forEach(el => {el.classList.remove(('nav_dropdawn-content--active'))})
-  e.currentTarget.closest('li').querySelector('.nav_dropdawn-content').classList.toggle('nav_dropdawn-content--active');
+  button.forEach(el => {el.classList.remove(('header-bottom-nav-btn--active'))});
+  e.currentTarget.classList.add('header-bottom-nav-btn--active');
+  drop.forEach(el => {el.classList.remove(('nav-dropdawn-content--active'))})
+  e.currentTarget.closest('li').querySelector('.nav-dropdawn-content').classList.toggle('nav-dropdawn-content--active');
   });
 });
 
 document.addEventListener('click', (e) => {
 console.log(e.target)
-  if (!e.target.classList.contains('nav_dropdawn-content') && !e.target.classList.contains('bottom_nav-btn')) {
-  button.forEach(el => {el.classList.remove(('bottom_nav-btn--active'))});
-  drop.forEach(el => {el.classList.remove(('nav_dropdawn-content--active'))})
+  if (!e.target.classList.contains('nav-dropdawn-content') && !e.target.classList.contains('header-bottom-nav-btn')) {
+  button.forEach(el => {el.classList.remove(('header-bottom-nav-btn--active'))});
+  drop.forEach(el => {el.classList.remove(('nav-dropdawn-content--active'))})
 }
 });
 
@@ -48,19 +48,19 @@ new SimpleBar(document.getElementById('myScrollfive'), { autoHide: false });
 // Header-search
 
 window.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('#header_search-adaptive').addEventListener('click', function() {
-      document.querySelector('#header_search-form').classList.toggle('is-active')
+  document.querySelector('#header__search-adaptive').addEventListener('click', function() {
+      document.querySelector('#header__search-form').classList.toggle('is-active')
   })
 })
 
 window.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('#header_form-cross').addEventListener('click', function() {
-      document.querySelector('#header_search-form').classList.toggle('is-active')
+  document.querySelector('#header__form-cross').addEventListener('click', function() {
+      document.querySelector('#header__search-form').classList.toggle('is-active')
   })
 
   document.addEventListener("click", (e) => {
-    if (!e.target.closest(".header_search-form")) {
-      document.querySelector(".header_search-adaptive-active").classList.add("is-active")
+    if (!e.target.closest(".header__search-form")) {
+      document.querySelector(".header__search-adaptive-active").classList.add("is-active")
     }
   })
 })
@@ -74,7 +74,7 @@ searchEnabled: false
 
 // swiper gallery
 
-new Swiper(".gallery_right", {
+new Swiper(".gallery-right", {
   slidesPerView: 3,
   slidesPerGroup: 3,
   grid: {
@@ -82,12 +82,12 @@ new Swiper(".gallery_right", {
   },
   spaceBetween: 30,
   pagination: {
-    el: ".swiper-pagination--right",
+    el: ".swiper-pagination-right",
     type: "fraction"
   },
   navigation: {
-    nextEl: ".swiper-btn--next",
-    prevEl: ".swiper-btn--prev"
+    nextEl: ".swiper-btn-next",
+    prevEl: ".swiper-btn-prev"
   },
 
   breakpoints: {
@@ -105,7 +105,6 @@ new Swiper(".gallery_right", {
       },
       spaceBetween: 30
     },
-
     1200: {
       slidesPerView: 3,
       grid: {
@@ -124,25 +123,25 @@ new Swiper(".gallery_right", {
 // catalog
 
 $( function() {
-  $( ".ac--list" ).accordion({
+  $( ".ac-list" ).accordion({
     icons: false,
     heightStyle: "content",
     collapsible: true,
     active: false
   });
-    $(".heading-item--btn").click(function(e) {
+    $(".heading-item-btn").click(function(e) {
       let path = e.currentTarget.dataset.path
       $(".tab-content").removeClass("tab-active");
-      $(".heading-item--btn").removeClass("btn-active")
+      $(".heading-item-btn").removeClass("btn-active")
       $(`[data-target='${path}']`).addClass("tab-active");
       $(this).addClass("btn-active");
-      $(`[data-target='${path}']`).find($(".ac--list")).accordion({
+      $(`[data-target='${path}']`).find($(".ac-list")).accordion({
         active: 0
       })
     })
 
     document.querySelectorAll(".tab-content").forEach(item => {
-      let btns = item.querySelectorAll(".ac_date_item-tab");
+      let btns = item.querySelectorAll(".ac-date-item-tab");
       let articles = item.querySelectorAll(".article-content");
       btns.forEach(el => {
         el.addEventListener("click",function(e) {
@@ -165,7 +164,7 @@ $( function() {
 
 // events
 
-new Swiper(".events_block", {
+new Swiper(".events__block", {
   slidesPerView: 3,
   slidesPerGroup: 3,
   grid: {
@@ -173,12 +172,12 @@ new Swiper(".events_block", {
   },
   spaceBetween: 30,
   pagination: {
-    el: ".events-swiper-pagination--right",
-    type: "none"
+    el: ".events__swiper-pagination",
+    type: "bullets"
   },
   navigation: {
-    nextEl: ".events_swiper-btn--next",
-    prevEl: ".events_swiper-btn--prev"
+    nextEl: ".events__swiper-btn-next",
+    prevEl: ".events__swiper-btn-prev"
   },
 
   breakpoints: {
@@ -238,12 +237,12 @@ new Swiper(".newSwiperf", {
   },
   spaceBetween: 30,
   pagination: {
-    el: ".swiper-pagination--right",
+    el: ".swiper-pagination-right",
     type: "fraction"
   },
   navigation: {
-    nextEl: ".editions_swiper-btn--next",
-    prevEl: ".editions_swiper-btn--prev"
+    nextEl: ".editions__swiper-btn-next",
+    prevEl: ".editions__swiper-btn-prev"
   },
 
   breakpoints: {
@@ -294,12 +293,12 @@ new Swiper(".newSwiperf", {
 
 
 let btnn = document.querySelector(".subtitile-editions");
-let checklist = document.querySelector(".editions_checkbox");
+let checklist = document.querySelector(".editions__checkbox");
 btnn.addEventListener("click", function() {
   checklist.classList.toggle("checklist__active");
-  document.querySelectorAll(".editions_checkbox-label").forEach(el => {
+  document.querySelectorAll(".editions__checkbox-label").forEach(el => {
     el.classList.toggle("active");
-    let checkbox = el.querySelector(".editions-label");
+    let checkbox = el.querySelector(".editions__label");
 
     if (checkbox.checked) {
       el.classList.add("active");
@@ -307,7 +306,7 @@ btnn.addEventListener("click", function() {
   })
 });
 
-document.querySelectorAll(".editions_checkbox-label").forEach(el => {
+document.querySelectorAll(".editions__checkbox-label").forEach(el => {
   el.addEventListener("click", function() {
     let label = this;
     if (!checklist.classList.contains("checklist__active")) {
@@ -320,14 +319,14 @@ document.querySelectorAll(".editions_checkbox-label").forEach(el => {
 // projects
 
 
-let projectsSlider = new Swiper(".projects_swiper", {
+let projectsSlider = new Swiper(".projects__swiper", {
   slidesPerView: 3,
   slidesPerGroup: 1,
   spaceBetween: 30,
   loop: false,
   navigation: {
-    nextEl: ".projects_swiper-button-next",
-    prevEl: ".projects_swiper-button-prev"
+    nextEl: ".projects__swiper-button-next",
+    prevEl: ".projects__swiper-button-prev"
   },
 
   breakpoints: {
@@ -344,7 +343,7 @@ let projectsSlider = new Swiper(".projects_swiper", {
     1024: {
       slidesPerView: 2,
   slidesPerGroup: 1,
-  spaceBetween: 50,
+  spaceBetween: 20,
     },
     1200: {
       slidesPerView: 3,
@@ -360,3 +359,4 @@ let projectsSlider = new Swiper(".projects_swiper", {
   }
 
 });
+
