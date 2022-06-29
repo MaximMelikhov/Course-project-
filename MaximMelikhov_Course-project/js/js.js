@@ -183,13 +183,23 @@ new Swiper(".events__block", {
   breakpoints: {
     240: {
       slidesPerView: 1,
+      slidesPerGroup: 1,
       grid: {
         rows: 1
       },
-      spaceBetween: 0
+      spaceBetween: 20
     },
-    520: {
+    420: {
+      slidesPerView: 1.5,
+      slidesPerGroup: 1,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 40
+    },
+    600: {
       slidesPerView: 2,
+      slidesPerGroup: 1,
       grid: {
         rows: 1
       },
@@ -197,12 +207,13 @@ new Swiper(".events__block", {
     },
     767: {
       slidesPerView: 2,
+      slidesPerGroup: 1,
       grid: {
         rows: 1
       },
       spaceBetween: 28
     },
-    1023: {
+    769: {
       slidesPerView: 3,
       grid: {
         rows: 1
@@ -254,7 +265,7 @@ new Swiper(".newSwiperf", {
       spaceBetween: 5
     },
     420: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       grid: {
         rows: 1
       },
@@ -275,6 +286,13 @@ new Swiper(".newSwiperf", {
       spaceBetween: 50
     },
     1200: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 50
+    },
+    1400: {
       slidesPerView: 3,
       grid: {
         rows: 1
